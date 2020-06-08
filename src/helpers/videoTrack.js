@@ -97,7 +97,7 @@ async function selectAndJoinRoom(identity, roomName, error = null) {
 
   try {
 
-    const response = await axios.get(`http://localhost:8000/token?identity=${identity}&roomName=${roomName}`);
+    const response = await axios.get(`http://3.16.148.142:8000/token?identity=${identity}&roomName=${roomName}`);
     
     // Extract the AccessToken from the Response.
     const token = response.data.token;
