@@ -10,6 +10,7 @@
 
 const express = require('express');
 const app = express();
+const http = require('http');
 const path = require('path');
 const AccessToken = require('twilio').jwt.AccessToken;
 const VideoGrant = AccessToken.VideoGrant;
@@ -46,7 +47,7 @@ app.get('/token', function(request, response) {
   token.identity = identity;
 
   // Grant the access token Twilio Video capabilities.
-  const videoGrant = new VideoGrant({ room: roomName });
+  const videoGrant = new VideoGrant();
   token.addGrant(videoGrant);
 
   // Serialize the token to a JWT string and include it in a JSON response.
@@ -57,4 +58,4 @@ app.get('/token', function(request, response) {
   console.log(`issued token for ${identity} in room ${roomName}`);
 });
 
-app.listen(3000, () => console.log('token server running on 3000'));
+app.listen(8000, () => console.log('token server running on 8000'));
