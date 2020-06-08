@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 const axios = require('axios');
 const { isSupported } = require('twilio-video');

@@ -1,29 +1,21 @@
-# video-chat
+# Twilio video Chat-Vue.js
 
 ## Project setup
+Install packages.
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+Copy and create the .env file
 ```
-yarn run serve
+cp .env.example .env
 ```
-
-### Compiles and minifies for production
+Add the twilio api credentials in .env file.
 ```
-yarn run build
+TWILIO_ACCOUNT_SID=TWILIO_ACCOUNT_SID
+TWILIO_API_KEY_SID=TWILIO_API_KEY
+TWILIO_API_SECRET_SID=TWILIO_API_SECRET
 ```
-
-### Run your tests
+### Running on local
 ```
-yarn run test
+npm start
 ```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
