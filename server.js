@@ -21,8 +21,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 const MAX_ALLOWED_SESSION_DURATION = 14400;
 const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID;
-const twilioApiKeySID = process.env.TWILIO_API_KEY;
-const twilioApiKeySecret = process.env.TWILIO_API_SECRET;
+const twilioApiKeySID = process.env.TWILIO_API_KEY_SID;
+const twilioApiKeySecret = process.env.TWILIO_API_SECRET_SID;
 
 /**
  * Generate an Access Token for a chat application user provided via the url
@@ -58,4 +58,4 @@ app.get('/token', function(request, response) {
   console.log(`issued token for ${identity} in room ${roomName}`);
 });
 
-app.listen(8000, () => console.log('token server running on 8000'));
+app.listen(8000, "0.0.0.0", () => console.log('token server running on 8000'));
