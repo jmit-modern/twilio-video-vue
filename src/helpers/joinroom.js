@@ -340,9 +340,9 @@ const joinRoom = async function joinRoom(token, connectOptions) {
     })
 
     participantMutedOrUnmutedMedia(room, (track, participant) => {
-      track.detach().forEach(element => {
-        element.remove();
-      });
+      // track.detach().forEach(element => {
+      //   element.remove();
+      // });
       $(`div#${participant.sid}`).find(`.${track.kind}_control`).addClass('muted');
       
     }, (track, participant) => {
@@ -351,13 +351,13 @@ const joinRoom = async function joinRoom(token, connectOptions) {
       $(`div#${participant.sid}`).find(`.${track.kind}_control`).removeClass('muted');
   
       if (track.kind === 'audio') {
-        activeParticipant.append(track.attach());
-        mainParticipant.append(track.attach());
+        // activeParticipant.append(track.attach());
+        // mainParticipant.append(track.attach());
         // setCurrentActiveParticipant(room);
       }
       if (track.kind === 'video') {
-        activeParticipant.append(track.attach());
-        mainParticipant.append(track.attach());
+        // activeParticipant.append(track.attach());
+        // mainParticipant.append(track.attach());
         // setCurrentActiveParticipant(room);
       }
     });

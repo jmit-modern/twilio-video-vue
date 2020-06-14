@@ -8,7 +8,7 @@
         {{room_name}}
     </div>
     <div class="settings">
-        <img src="../assets/gear.png" width="25" height="25" class="d-inline-block align-top" alt="" />
+        <!-- <img src="../assets/gear.png" width="25" height="25" class="d-inline-block align-top" alt="" /> -->
     </div>
    </nav>
 </template>
